@@ -16,7 +16,7 @@ Route::post('/criar_funcionarios', function (Request $request){
     $funcionario->name = $request->input('name');
     $funcionario->cpf = $request->input('cpf');
     $funcionario->funcao = $request->input('funcao');
-    $funcionario->departamento_id = $request->input('departamento_id'); // <-- esta linha faz a mágica
+    $funcionario->departamento_id = $request->input('departamento_id'); 
     $funcionario->save();
 
     return response()->json($funcionario);
